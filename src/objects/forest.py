@@ -1,5 +1,6 @@
-from src.objects.tree import Tree
 import random
+
+from src.objects.tree import Tree
 
 
 class Forest:

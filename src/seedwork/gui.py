@@ -1,6 +1,5 @@
-import tkinter
-
 import customtkinter
+
 from src.objects.simulation import Simulation
 
 customtkinter.set_appearance_mode("dark")
@@ -25,11 +24,11 @@ class App(customtkinter.CTk):
         self.frame_1.pack(pady=20, padx=60, fill="both", expand=True)
 
         self.label_1 = customtkinter.CTkLabel(master=self.frame_1, justify=customtkinter.LEFT,
-                                         text="Chance to being set on fire by a neighbor")
+                                              text="Chance to being set on fire by a neighbor")
         self.label_1.pack(pady=0, padx=10)
 
         self.slider_1 = customtkinter.CTkSlider(master=self.frame_1, command=self._setup_p,
-                                           from_=0, to=1, number_of_steps=100)
+                                                from_=0, to=1, number_of_steps=100)
         self.slider_1.pack(pady=10, padx=10)
         self.slider_1.set(0.3)
 

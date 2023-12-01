@@ -1,6 +1,6 @@
 from src.objects.forest import Forest
-from src.seedwork.drawer import draw_forest
 from src.seedwork.display import display_simulation
+from src.seedwork.drawer import draw_forest
 
 
 class Simulation:

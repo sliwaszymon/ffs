@@ -1,6 +1,6 @@
+import numpy as np
 import pygame
 from PIL import Image
-import numpy as np
 
 
 def display_simulation(images: list[Image], fps: int) -> None:
