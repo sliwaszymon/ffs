@@ -8,12 +8,13 @@ def display_simulation(images: list[Image], fps: int) -> None:
 
     frame_size = images[0].size
     screen = pygame.display.set_mode(frame_size)
+    pygame.display.set_caption("Forest Fire Simulation")
     clock = pygame.time.Clock()
 
     font = pygame.font.Font(None, 36)
 
     running = True
-    idx = 1
+    idx = 0
 
     while running and idx < len(images):
         for event in pygame.event.get():
@@ -24,7 +25,7 @@ def display_simulation(images: list[Image], fps: int) -> None:
         pygame_image = pygame.surfarray.make_surface(np.transpose(np_image, (1, 0, 2)))
         screen.blit(pygame_image, (0, 0))
 
-        text_surface = font.render(f'Generation: {idx}', True, (255, 255, 255))
+        text_surface = font.render(f'Generation: {idx+1}', True, (255, 255, 255))
         screen.blit(text_surface, (10, 10))
 
         pygame.display.flip()
