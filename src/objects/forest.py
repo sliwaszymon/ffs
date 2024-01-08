@@ -27,6 +27,11 @@ class Forest:
             for x in range(self.size[0]):
                 if self.field[y][x].state.value == 1:
                     burning_neighbors = self._burning_neighbors((x, y))
+                    # If count of burning trees doesn't matter
+                    # if burning_neighbors > 0:
+                    #     if random.uniform(0.0, 1.0) < p:
+                    #         new_generation[y][x].set_on_fire()
+                    # If it is important
                     for _ in range(burning_neighbors):
                         if random.uniform(0.0, 1.0) < p:
                             new_generation[y][x].set_on_fire()
